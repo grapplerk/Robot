@@ -9,7 +9,11 @@ using namespace std;
 
 class Battery:public Robot_part{
 public:
-    Battery(string _name, int _model_number, double _cost,string _description, string _image_filename,string _type, double _weight):name{_name},model_number{_model_number}, cost{_cost}, description{_description},image_filename(_image_filename),type{_type},weight{_weight} {}
+    Battery(string name, int model_number, double cost,string description, string image_filename,string type, double weight):Robot_part(name,model_number,cost,description,image_filename,type,weight){}
+
+    double get_power_available();
+    double get_max_energy();
+
 private:
     double power_available;
     double max_energy;

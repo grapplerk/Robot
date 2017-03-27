@@ -10,9 +10,9 @@ using namespace std;
 class Head :public Robot_part{
 public:
     
-    Head(string _name, int _model_number, double _cost,string _description, string _image_filename,string _type, double _weight):name{_name},model_number{_model_number}, cost{_cost}, description{_description},image_filename(_image_filename),type{_type},weight{_weight} {}
+    Head(string name, int model_number, double cost,string description, string image_filename,string type, double weight):Robot_part(name,model_number,cost,description,image_filename,type,weight){}
     
-    double get_power():
+    double get_power();
 
 private:
     double power;

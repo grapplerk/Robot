@@ -16,8 +16,12 @@ using namespace std;
 
 class Torso: public Robot_part{
 public:
-    Torso(string _name, int _model_number, double _cost,string _description, string _image_filename,string _type, double _weight):name{_name},model_number{_model_number}, cost{_cost}, description{_description},image_filename(_image_filename),type{_type},weight{_weight} {}
-
+    Torso(string name, int model_number, double cost,string description, string image_filename,string type, double weight):Robot_part(name,model_number,cost,description,image_filename,type,weight){}
+    
+    int get_battery_compartments();
+    int get_max_arms();
+    
+    
 private:
     int battery_compartments;
     int max_arms;

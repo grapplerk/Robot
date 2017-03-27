@@ -9,7 +9,7 @@ using namespace std;
 
 class Robot_part{
 public:
-    Robot_part(string _name, int _model_number, double _cost,string _description, string _image_filename,string _type, double _weight):name{_name},model_number{_model_number}, cost{_cost}, description{_description},image_filename(_image_filename),type{_type},weight{_weight} {}
+    Robot_part(string name, int model_number, double cost,string description, string image_filename,string type, double weight):name{name},model_number{model_number}, cost{cost}, description{description},image_filename(image_filename),type{type},weight{weight} {}
     
     string get_name();
     int get_model_number();
