@@ -1,10 +1,4 @@
-//
-//  Torso.h
-//  Robot
-//
-//  Created by Sig Koenigseder on 3/22/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
+
 
 #ifndef Torso_h
 #define Torso_h
