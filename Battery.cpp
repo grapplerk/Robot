@@ -1,22 +1,9 @@
-//
-//  Battery.cpp
-//  Robot
-//
-//  Created by Sig Koenigseder on 3/26/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
 
 #include "Battery.h"
 #include <stdio.h>
 
-double Battery::get_power_available(){
-    
-    return power_available;
-    
-}
-
-
-double Battery::get_max_energy(){
-    return max_energy;
-    
+ostream& operator<<(ostream& ost, const Battery& battery){
+    ost<<"Battery"<<battery.name()<<"(model"<<battery.model_number()<<")"<<"costs $"<<battery.cost()<<"and uses"<<battery.get_power_available()<<"Power"<<endl;
+    ost<<battery.description();
+    return ost;
 }

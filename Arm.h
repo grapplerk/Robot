@@ -8,22 +8,15 @@ using namespace std;
 #include <string>
 #include <vector>
 
-class Arm :public Robot_part{
+class Arm : public Robot_part {
 public:
+    Arm(string name, string model_number, double cost, string description, double power):Robot_part(description, cost, model_number, name),power_consumed{power_consumed}{}
     
-    Arm(string name, int model_number, double cost,string description, string image_filename,string type, double weight):Robot_part(name,model_number,cost,description,image_filename,type,weight){}
-   
-double get_max_power();
-    
-private:
-    double max_power;
-    
-    
-    
-    
+    int max_power() const;
+    int power(int rate);
+protected:
+    int power_consumed;
+
 };
 
-
-
-
-#endif /* Arm_hpp */
+#endif /* Arm_h*/

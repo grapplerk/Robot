@@ -1,35 +1,25 @@
 
-
-
-
 #include "Robot_part.h"
 #include <string>
 
-string Robot_part::get_name(){
-    
-return name;
+
+double Robot_part::cost() const {
+    return _cost;
 }
 
-int Robot_part::get_model_number(){
-    return model_number;
-    }
-
-double Robot_part::get_cost(){
-    return cost;
+string Robot_part::name() const{
+    return _name;
 }
 
-string Robot_part::get_description(){
-    return description;
+double Robot_part::weight() const {
+    return _weight;
 }
 
-string Robot_part::get_image_filename(){
-    return image_filename;
+
+string Robot_part::model_number() const {
+    return _model_number;
 }
 
-string Robot_part::get_type(){
-    return type;
-}
-
-double Robot_part::get_weight(){
-    return weight;
+string Robot_part::description() const {
+    return _description;
 }

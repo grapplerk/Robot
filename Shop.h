@@ -7,7 +7,7 @@
 #include <vector>
 #include <stdio.h>
 #include "Robot_part.h"
-#include "Head.h"
+#include "Heads.h"
 #include "Robot_part.h"
 #include "Locomotor.h"
 #include "Torso.h"
@@ -23,11 +23,11 @@
 
 class Shop{
 private:
-    vector<Order> orders;
-    vector<Robot_part*> robot_parts;
-    vector<Robot_model> robot_models;
-    vector<Customer> customers;
-    vector<Sales_Associate> sales_associates;
+   static vector<Order*> orders;
+   static vector<Robot_part*> robot_parts;
+   static vector<Robot_model*> robot_models;
+   static vector<Customer> customers;
+   static vector<Sales_Associate> sales_associates;
 public:
     void creat_new_robot_part(Robot_part);
     void creat_new_robot_model(Robot_model);
@@ -39,4 +39,4 @@ public:
     
 };
 
-#endif /* Shop_hpp */
+#endif /* Shop_h */

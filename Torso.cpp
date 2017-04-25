@@ -1,17 +1,12 @@
-//
-//  Torso.cpp
-//  Robot
-//
-//  Created by Sig Koenigseder on 3/26/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
+
 
 #include <stdio.h>
 #include "Torso.h"
 
-int Torso::get_battery_compartments(){
-    
-    return battery_compartments;
+ostream& operator<<(ostream& ost, const Torso& torso){
+    ost<<"Torso"<<torso.name()<<"(model"<<torso.model_number()<<")"<<"costs $"<<torso.cost()<<"and uses"<<torso.get_battery_compartments()<<"Batteries"<<endl;
+    ost<<torso.description();
+    return ost;
 }
 
 int Torso::get_max_arms(){

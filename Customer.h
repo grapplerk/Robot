@@ -15,7 +15,7 @@
 #include <vector>
 #include <stdio.h>
 #include "Robot_part.h"
-#include "Head.h"
+#include "Heads.h"
 #include "Robot_part.h"
 #include "Locomotor.h"
 #include "Torso.h"

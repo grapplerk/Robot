@@ -15,22 +15,19 @@
 #include <string>
 #include <vector>
 #include <stdio.h>
-#include "Robot_part.h"
-#include "Head.h"
-#include "Robot_part.h"
-#include "Locomotor.h"
-#include "Torso.h"
-#include "Battery.h"
+
 
 class Sales_Associate{
 public:
+    Sales_Associate(string,string);
+    Sales_Associate(istream& input);
     void setter_employee_name(string name);
     void setter_employee_number(int num);
     void request_raise();
 private:
     string employee_name;
-    int employee_number;
-    
+    string employee_number;
+    double salary;
 };
 
 

@@ -10,9 +10,9 @@ using namespace std;
 
 class Torso: public Robot_part{
 public:
-    Torso(string name, int model_number, double cost,string description, string image_filename,string type, double weight):Robot_part(name,model_number,cost,description,image_filename,type,weight){}
+    Torso(string name, string model_number, double cost, string description):Robot_part(description, cost, model_number, name),battery_compartments{get_battery_compartments()}{}
     
-    int get_battery_compartments();
+    int get_battery_compartments()const{return battery_compartments;}
     int get_max_arms();
     
     
@@ -23,5 +23,4 @@ private:
     
     
 };
-
 #endif /* Torso_h */

@@ -1,10 +1,4 @@
-//
-//  Order.hpp
-//  Robot
-//
-//  Created by Sig Koenigseder on 4/16/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
+
 
 #ifndef Order_h
 #define Order_h
@@ -14,7 +8,7 @@
 #include <vector>
 #include <stdio.h>
 #include "Robot_part.h"
-#include "Head.h"
+#include "Heads.h"
 #include "Robot_part.h"
 #include "Locomotor.h"
 #include "Torso.h"
@@ -31,7 +25,10 @@ private:
     string date;
     string status;
     string customer_name;
+    int amount;
+    
 public:
+    Order(int,Robot_model,string);
     Robot_model order;
     Customer new_customer;
     Sales_Associate coworker;
@@ -40,12 +37,11 @@ public:
     int set_order_number(int num);
     string set_date(string date);
     string set_status(string status);
-    
     int get_order_number();
     string get_date();
     string get_status();
     string get_customer_name(string name);
-    
+    int get_amount(int num);
     
     
 };

@@ -2,20 +2,24 @@
 
 #ifndef Robot_model_h
 #define Robot_model_h
-#include "Arm.h"
+
 #include <string>
 #include <vector>
 #include <stdio.h>
 #include "Robot_part.h"
-#include "Head.h"
-#include "Robot_part.h"
-#include "Locomotor.h"
-#include "Torso.h"
-#include "Battery.h"
+#include"Arm.h"
+#include"Torso.h"
+#include"Locomotor.h"
+#include"Heads.h"
+#include"Battery.h"
 
 class Robot_model{
     
 public:
+    
+    Robot_model(string name,int num);
+    Robot_model(istream& input);
+    Robot_model();
     double max_speed();
     double battery_life;
     string get_model_name(string name);
@@ -43,10 +47,10 @@ public:
     double get_battery_max(int index);
     double get_battery_energy(int index);
     
-    
+
     bool order_locomotor(Locomotor);
     bool order_arm(Arm);
-    bool order_head(Head);
+    bool order_head(Heads);
     void order_battery(Battery);
     bool order_torso(Torso);
     
@@ -54,10 +58,10 @@ public:
 
 private:
     double model_cost;
-    string model_name="name";
+    string model_name="";
     int model_number= 1;
     
-    vector<Head> robot_head;
+    vector<Heads> robot_head;
     vector<Locomotor> robot_locomotor;
     vector <Torso> robot_torso;
     vector <Battery> robot_battery;

@@ -41,3 +41,7 @@ double Order::robot_cost(double price){
     
     return order.get_model_cost(price);
 }
+
+int Order::get_amount(int num){
+   return amount=num;
+}
