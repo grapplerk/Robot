@@ -1,10 +1,4 @@
-//
-//  Customer.cpp
-//  Robot
-//
-//  Created by Sig Koenigseder on 4/9/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
+
 
 #include "Customer.h"
 

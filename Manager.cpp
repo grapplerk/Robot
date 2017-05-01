@@ -18,7 +18,47 @@
 
 
 void Manager::new_arm(string name, string part_number, double weight, double cost, int power_consumed, string description) {
-    string temp;
-   temp= robot_arm.push_back(name,part_number,weight,cost,power_consumed,description);
-    
+    _arm(Arm({(name,part_number,weight,cost,power_consumed,description});
+    }
+             
+    vector<Arm>Shop::arms() const(return _arms);
 }
+             
+void Manager::new_battery(string name, string part_number, double weight,double cost, int max_energy_stored, string description){
+                 
+    _battery(Battery({(name,part_number,weight,cost,max_energy_stored,description});
+        
+    vector<Battery>Shop::battery() const(return _battery);
+}
+
+void Manager::new_torso(string name, string part_number, double weight,double cost, double battery_compartments, string description){
+    
+    _torso(Torso({(name,part_number,weight,cost,battery_compartments,description});
+
+        vector<Torso>Shop::toro()const(return _torso);
+
+}
+void Manager:: new_head(string name, string part_number, double weight,double cost, double _power, string description){
+                 
+    _head(Head({(name,part_number,weight,cost,power,description)}))
+
+        vector<Torso>Shop::head()const(return _head);
+                 
+}
+void Manager::new_locomotor(string name, string part_number, double weight,double cost, int power_consumed, string description);
+               
+    _locomotor(Locotor({(name,part_number,weight,cost,power_consumed,description});
+        
+    vector<Torso>Shop::Locomotor()const(return _locomotor);
+               
+               
+}
+void Shop::create_model(string name, string part_number, double price,Torso& torso, Head& head, Arm& arm1, Arm& arm2, Locomotor& locomotor,Battery& batterya, Battery& batteryb, Battery& batteryc) {
+    
+    _models.push_back(Robot_model{name, part_number, price,torso, head, arm1, arm2, locomotor,batterya, batteryb, batteryc});}
+                       
+    vector<Robot_model> Shop::new_model() const {return _models;}
+
+}
+            
+             

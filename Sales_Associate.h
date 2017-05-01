@@ -1,10 +1,4 @@
-//
-//  Sales Associate.hpp
-//  Robot
-//
-//  Created by Sig Koenigseder on 4/9/17.
-//  Copyright © 2017 Sig Koenigseder. All rights reserved.
-//
+
 
 #ifndef Sales_Associate_h
 #define Sales_Associate_h
